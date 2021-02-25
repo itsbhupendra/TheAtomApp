@@ -28,15 +28,12 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "GoogleActivity";
-
     private GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 9001;
     private FirebaseAuth mAuth;
-
+    private ProgressBar mProgressbar;
     private static final String url="https://www.theatom.app/";
 
-
-    private ProgressBar mProgressbar;
 
 
     @Override
@@ -96,8 +93,6 @@ public class LoginActivity extends AppCompatActivity {
                 signIn();
             }
         });
-
-
     }
 
     @Override
@@ -146,14 +141,12 @@ public class LoginActivity extends AppCompatActivity {
 
     private void createRequest() {
 
-        // [START config_signin]
-        // Configure Google Sign In
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
-        // [END config_signin]
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }

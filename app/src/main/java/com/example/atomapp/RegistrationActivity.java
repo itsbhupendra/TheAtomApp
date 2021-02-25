@@ -21,21 +21,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
         ActionBar actionBar=getSupportActionBar();
         actionBar.hide();
-//        assert getSupportActionBar() != null;   //null check
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-//        Bundle basket=new Bundle();
-//        basket.putString("abc",guestName);
 
         EditText usernameEditText= findViewById(R.id.edit_name);
-        Button buttonContinue=(Button) findViewById(R.id.continueToHome);
+        Button buttonContinue= findViewById(R.id.continueToHome);
         Button backButtonInRegistration=findViewById(R.id.back_button_in_Registration);
 
 
         guestName=usernameEditText.getText().toString();
 
-
-//        String GuestName=findViewById(R.id.edit_name).toString();
 
         backButtonInRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,18 +43,8 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//                if(GuestName.matches("")){
-//                    Toast.makeText(RegistrationActivity.this,"Please type a name",Toast.LENGTH_LONG).show();
-////            Toast.makeText(getActivity(), "This is my Toast message!",
-////                    Toast.LENGTH_LONG).show();
-//                }
 
-
-//                    Intent intent = new Intent(RegistrationActivity.this,HomeAsGuest.class);
-//                startActivity(intent);
-//                Log.e(guestName);
                    if(TextUtils.isEmpty(usernameEditText.getText().toString())) {
-//                       Log.e(GuestName.toString());
                        Toast.makeText(RegistrationActivity.this, "Please type a name", Toast.LENGTH_LONG).show();
                        return;
                    }
@@ -70,29 +53,12 @@ public class RegistrationActivity extends AppCompatActivity {
                        intent.putExtra("message",usernameEditText.getText().toString());
                        startActivity(intent);
                    }
-////
-////
+
                 }
 
 
         });
 
-//        if(GuestName.length()==0){
-//            Toast.makeText(this,"Please type a name",Toast.LENGTH_LONG).show();
-////            Toast.makeText(getActivity(), "This is my Toast message!",
-////                    Toast.LENGTH_LONG).show();
-//        }
     }
 
-//    private String getGuestName() {
-//        EditText usernameEditText= findViewById(R.id.edit_name);
-//        String tempGuestName=usernameEditText.getText().toString();
-//        return tempGuestName;
-//    }
-
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        finish();
-//        return true;
-//    }
 }
