@@ -156,7 +156,6 @@ public class LoginActivity extends AppCompatActivity {
         // [END config_signin]
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
     }
 
     private void signIn() {
