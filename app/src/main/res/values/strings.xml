@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_as_guest">Continue As Guest</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="Hi_what_do_your">Hi, what do your </string>
+    <string name="friends_call_you">friends call you? </string>
+   <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="hello_world">Hello Square World!</string>
+    <string name="name">Name</string>
+    <string name="continueOn">Continue</string>
+    <string name="TextOnLogin1">Make meditation a</string>
+    <string name="TextOnLogin2">habit you love</string>
+    <string name="TextOnLogin3">By creating an account you agree to our</string>
+    <string name="TextOnLogin4"><u>Terms of services</u> &amp; <u>Privacy Policy</u>.</string>
+<!--    <string name="default_web_client_id">60286524829-njk46famlhtsegjj7rvojtolf7s7jt07.apps.googleusercontent.com</string>-->
+</resources>

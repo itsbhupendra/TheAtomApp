@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/imageid1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/home1"
+        android:padding="8dp"
+
+        />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/action_login_for_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|right"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:icon="@drawable/ic_baseline_login_24"
+        android:text="@string/login"
+        android:backgroundTint="@color/cardview_light_background"
+       />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/display_name_for_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|right"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@color/cardview_light_background"
+        />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/back_button_in_home_as_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|right"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+
+        app:icon="@drawable/ic_baseline_arrow_back_ios_24"
+
+        android:backgroundTint="@color/cardview_light_background"
+        />
+<!--        android:contentDescription="@string/extended_fab_content_desc"-->
+<!--        android:text="@string/extended_fab_label"-->
+<!--        app:icon="@drawable/ic_plus_24px"/>-->
+
+</RelativeLayout>

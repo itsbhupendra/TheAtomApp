@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/login"
+        android:padding="8dp"
+        android:layout_marginBottom="400dp"
+
+        />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+
+
+
+
+        android:layout_above="@id/text2"
+        android:text="@string/TextOnLogin1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+    />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/continueWithGoogle"
+        android:layout_marginBottom="50dp"
+        android:text="@string/TextOnLogin2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        />
+    <TextView
+        android:id="@+id/terms_and_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+       android:layout_marginBottom="16dp"
+        android:text="@string/TextOnLogin4"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/terms_and_condition"
+        android:layout_marginTop="800dp"
+        android:text="@string/TextOnLogin3"
+        android:textSize="12sp"
+
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:id="@+id/continueWithGoogle"
+        style="@style/ContinueWithGoogle"
+        android:background="@drawable/transparent_button"
+        android:text="@string/continue_with_google"
+        android:layout_above="@id/continueAsGuest"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="180dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:id="@+id/continueAsGuest"
+        style="@style/ContinueWithGoogle"
+        android:background="@drawable/transparent_button"
+        android:text="@string/continue_as_guest"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+    <!--    @id/imageid"-->
+
+
+
+</RelativeLayout>
