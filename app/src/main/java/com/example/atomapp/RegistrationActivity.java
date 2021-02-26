@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    public String guestName="Anon";
+    public String guestName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,10 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                /***
+                 * Check if EditText field is empty or not.
+                 * If yes,then show a Toast message to write some name in EditText field to continue.
+                 */
 
                    if(TextUtils.isEmpty(usernameEditText.getText().toString())) {
                        Toast.makeText(RegistrationActivity.this, "Please type a name", Toast.LENGTH_LONG).show();

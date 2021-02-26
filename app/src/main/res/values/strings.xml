@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">TheAtomApp</string>
     <string name="continue_with_google">Continue with Google</string>
     <string name="continue_as_guest">Continue As Guest</string>
     <string name="title_activity_login">LoginActivity</string>
@@ -14,5 +14,6 @@
     <string name="TextOnLogin2">habit you love</string>
     <string name="TextOnLogin3">By creating an account you agree to our</string>
     <string name="TextOnLogin4"><u>Terms of services</u> &amp; <u>Privacy Policy</u>.</string>
-<!--    <string name="default_web_client_id">60286524829-njk46famlhtsegjj7rvojtolf7s7jt07.apps.googleusercontent.com</string>-->
+    <string name="Hi">Hi, </string>
+
 </resources>

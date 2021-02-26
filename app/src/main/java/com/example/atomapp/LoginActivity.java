@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        //Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
         if(currentUser!=null){
@@ -62,9 +63,12 @@ public class LoginActivity extends AppCompatActivity {
 
         mProgressbar.setVisibility(ProgressBar.INVISIBLE);
 
+        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        createRequest();
+
+
+        createRequest();   //Function to configure Google Sign In options
 
         Button buttonAsGuest=(Button) findViewById(R.id.continueAsGuest);
         TextView termsAndConditions=findViewById(R.id.terms_and_condition);
@@ -103,17 +107,18 @@ public class LoginActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...)
         if(requestCode==RC_SIGN_IN){
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
 
-
+            // Google Sign In was successful, authenticate with Firebase
             try {
                 GoogleSignInAccount account=task.getResult(ApiException.class);
                 firebaseAuthWithGoogle(account.getIdToken());
             }
 
             catch (ApiException e){
-
+          // Google Sign In failed, show a message about the failure
                 mProgressbar.setVisibility(ProgressBar.INVISIBLE);
                 Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
 
@@ -128,6 +133,8 @@ public class LoginActivity extends AppCompatActivity {
         mAuth.signInWithCredential(credentials).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
+                // If Sign In is successful start the Home Activity.
                 if(task.isSuccessful()){
 
                     FirebaseUser user = mAuth.getCurrentUser();
@@ -135,6 +142,8 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent=new Intent(getApplicationContext(),HomeAfterAuth.class);
                     startActivity(intent);
                 }
+
+                // If Sign In failed, display a message about the failure.
                 else{
                     Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
 
