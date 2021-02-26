@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -24,7 +25,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
         EditText usernameEditText= findViewById(R.id.edit_name);
         Button buttonContinue= findViewById(R.id.continueToHome);
-        Button backButtonInRegistration=findViewById(R.id.back_button_in_Registration);
+        ImageView backButtonInRegistration=findViewById(R.id.back_button_in_Registration);
 
 
         guestName=usernameEditText.getText().toString();
@@ -52,6 +53,7 @@ public class RegistrationActivity extends AppCompatActivity {
                        Intent intent = new Intent(RegistrationActivity.this, HomeAsGuest.class);
                        intent.putExtra("message",usernameEditText.getText().toString());
                        startActivity(intent);
+//                       finish();
                    }
 
                 }

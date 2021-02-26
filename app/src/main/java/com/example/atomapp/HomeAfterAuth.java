@@ -3,6 +3,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -20,6 +23,7 @@ public class HomeAfterAuth extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar();
         actionBar.hide();
 
+        Toast.makeText(HomeAfterAuth.this,"Successfully Signed In",Toast.LENGTH_SHORT).show();
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
 
         if(signInAccount!=null){
@@ -29,8 +33,8 @@ public class HomeAfterAuth extends AppCompatActivity {
 
         Button button=findViewById(R.id.action_logout_for_user);
         Button buttonDisplayName=findViewById(R.id.display_name_for_user);
-        Button backButtonInHomeUser=findViewById(R.id.back_button_in_home_as_user);
-       
+        ImageView backButtonInHomeUser=findViewById(R.id.back_button_in_home_as_user);
+
         backButtonInHomeUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +51,7 @@ public class HomeAfterAuth extends AppCompatActivity {
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent=new Intent(HomeAfterAuth.this,LoginActivity.class);
+                Toast.makeText(HomeAfterAuth.this,"Signed Out",Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });

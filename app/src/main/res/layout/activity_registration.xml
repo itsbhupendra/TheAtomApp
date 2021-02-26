@@ -32,6 +32,7 @@
          style="@style/EditorFieldStyle"
           android:id="@+id/edit_name"
           android:hint="@string/name"
+          android:textColorHint="@color/Blue_700"
           android:inputType="text"
           android:layout_below="@id/friends"
           android:layout_marginTop="50dp"
@@ -49,17 +50,24 @@
         android:layout_centerHorizontal="true"
         />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <ImageView
         android:id="@+id/back_button_in_Registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_gravity="bottom|right"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        app:icon="@drawable/ic_baseline_arrow_back_ios_24"
-        android:backgroundTint="@color/cardview_light_background"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:layout_margin="32dp"
         />
+<!--    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+<!--        android:id="@+id/back_button_in_Registration"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:layout_gravity="bottom|right"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:icon="@drawable/ic_baseline_arrow_back_ios_24"-->
+<!--        android:backgroundTint="@color/cardview_light_background"-->
+<!--        />-->
 
 
 </RelativeLayout>

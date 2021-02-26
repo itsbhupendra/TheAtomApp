@@ -2,16 +2,17 @@ package com.example.atomapp;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -45,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         if(currentUser!=null){
             Intent intent = new Intent(LoginActivity.this,HomeAfterAuth.class);
             startActivity(intent);
+//            finish();
         }
     }
 
@@ -81,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(LoginActivity.this,RegistrationActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -91,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                mProgressbar.setVisibility(ProgressBar.VISIBLE);
                 signIn();
+//                finish();
             }
         });
     }
@@ -109,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             catch (ApiException e){
-                Log.w(TAG, "Google sign in failed", e);
+
                 mProgressbar.setVisibility(ProgressBar.INVISIBLE);
                 Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
 

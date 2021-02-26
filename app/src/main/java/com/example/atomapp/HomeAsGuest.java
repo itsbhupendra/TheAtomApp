@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,7 +27,8 @@ public class HomeAsGuest extends AppCompatActivity {
 
         Button buttonGuestName1=findViewById(R.id.display_name_for_guest);
         Button button= findViewById(R.id.action_login_for_guest);
-        Button backButtonInHomeAsGuest=findViewById(R.id.back_button_in_home_as_guest);
+        ImageView backButtonInHomeAsGuest=findViewById(R.id.back_button_in_home_as_guest);
+//        Button backButtonInHomeAsGuest=findViewById(R.id.back_button_in_home_as_guest);
 
 
         backButtonInHomeAsGuest.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +47,7 @@ public class HomeAsGuest extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(HomeAsGuest.this,LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
