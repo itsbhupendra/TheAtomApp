@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/Hi"
@@ -9,6 +10,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Hi_what_do_your"
         android:textSize="30sp"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="false"
         android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -21,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
+        android:textColor="@color/black"
         android:layout_below="@id/Hi"
         android:layout_marginLeft="40dp"
         android:textStyle="bold"
@@ -32,7 +35,9 @@
          style="@style/EditorFieldStyle"
           android:id="@+id/edit_name"
           android:hint="@string/name"
-          android:textColorHint="@color/Blue_700"
+          android:backgroundTint="@color/black"
+          android:textColorHint="@color/grey"
+          android:textColor="@color/black"
           android:inputType="text"
           android:layout_below="@id/friends"
           android:layout_marginTop="50dp"
@@ -52,22 +57,11 @@
 
     <ImageView
         android:id="@+id/back_button_in_Registration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_arrow_back_ios_24"
-        android:layout_margin="32dp"
+        style="@style/BackButtonNav"
+        android:layout_marginTop="16dp"
+
         />
-<!--    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
-<!--        android:id="@+id/back_button_in_Registration"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:layout_gravity="bottom|right"-->
-<!--        android:layout_alignParentLeft="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        app:icon="@drawable/ic_baseline_arrow_back_ios_24"-->
-<!--        android:backgroundTint="@color/cardview_light_background"-->
-<!--        />-->
+
 
 
 </RelativeLayout>
